@@ -20,8 +20,8 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called Dogecoin (http://www.dogecoin.com/),
- * which enables instant payments to anyone, anywhere in the world. Dogecoin uses peer-to-peer technology to operate
+ * This is the developer documentation of the reference client for an experimental new digital currency called SJWcoin (http://www.sjwcoin.com/),
+ * which enables instant payments to anyone, anywhere in the world. SJWcoin uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network. Whaddayaknow, sjw does the same,
  * All praise be to langerhans, rnicoll and co.
  *

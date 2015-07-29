@@ -36,8 +36,8 @@ if [ $# -lt 1 ]; then
         exit 1
 fi
 
-BITCOIND=${1}/dogecoind
-CLI=${1}/dogecoin-cli
+BITCOIND=${1}/sjwcoind
+CLI=${1}/sjwcoin-cli
 
 DIR="${BASH_SOURCE%/*}"
 SENDANDWAIT="${DIR}/send.sh"
@@ -61,7 +61,7 @@ B4PID=$!
 function CreateConfDir {
   DIR=$1
   mkdir -p $DIR
-  CONF=$DIR/dogecoin.conf
+  CONF=$DIR/sjwcoin.conf
   echo "regtest=1" >> $CONF
   echo "rpcuser=rt" >> $CONF
   echo "rpcpassword=rt" >> $CONF
@@ -125,7 +125,7 @@ function WaitMemPools {
 
 echo "Generating initial blockchain..."
 
-# 1 block, 500000 XDG each == 500000 DOGE
+# 1 block, 500000 XDG each == 500000 SJW
 $CLI $B1ARGS setgenerate true 1
 WaitBlocks
 $CLI $B2ARGS setgenerate true 1
@@ -147,7 +147,7 @@ echo "Creating transactions..."
 function S {
   TXID=$( $CLI -datadir=${D}/node${1} sendtoaddress ${2} "${3}" 0 )
   if [[ $TXID == "" ]] ; then
-      echoerr "node${1}: error sending ${3} doge"
+      echoerr "node${1}: error sending ${3} sjw"
       echo -n "node${1} balance: "
       $CLI -datadir=${D}/node${1} getbalance "*" 0
       exit 1

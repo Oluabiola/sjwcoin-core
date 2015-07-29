@@ -14,8 +14,8 @@ fi
 
 set -f
 
-BITCOIND=${1}/dogecoind
-CLI=${1}/dogecoin-cli
+BITCOIND=${1}/sjwcoind
+CLI=${1}/sjwcoin-cli
 
 DIR="${BASH_SOURCE%/*}"
 SENDANDWAIT="${DIR}/send.sh"
