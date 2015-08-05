@@ -125,10 +125,10 @@ public:
         // The message start string is designed to be unlikely to occur in normal data.
         // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
         // a large 4-byte int at any alignment.
-        pchMessageStart[0] = 0xfc;
-        pchMessageStart[1] = 0xc1;
-        pchMessageStart[2] = 0xb7;
-        pchMessageStart[3] = 0xdc;
+        pchMessageStart[0] = 0xfb;
+        pchMessageStart[1] = 0xc0;
+        pchMessageStart[2] = 0xb6;
+        pchMessageStart[3] = 0xdb;
         vAlertPubKey = ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f");
         nDefaultPort = 19976;
         nRPCPort = 19975;
@@ -142,19 +142,19 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("testnet.sjwcoin.com", "testnet.sjwcoin.com"));
+        vSeeds.push_back(CDNSSeedData("testnet.sjwcoin.com", "testnet-seed.sjwcoin.com"));
 
         // Boost sucks, and should not be used. Workaround for Boost not being compatible with C++11;
         
-        std::vector<unsigned char> pka = list_of(113);
+        std::vector<unsigned char> pka = list_of(95);
         base58Prefixes[PUBKEY_ADDRESS] = pka;
-        std::vector<unsigned char> sca = list_of(196);
+        std::vector<unsigned char> sca = list_of(5);
         base58Prefixes[SCRIPT_ADDRESS] = sca;
-        std::vector<unsigned char> sk  = list_of(241);
+        std::vector<unsigned char> sk  = list_of(223);
         base58Prefixes[SECRET_KEY]     = sk;
-        std::vector<unsigned char> epk = list_of(0x04)(0x35)(0xD1)(0xDF);
+        std::vector<unsigned char> epk = list_of(0x04)(0x88)(0xC4)(0x2E);
         base58Prefixes[EXT_PUBLIC_KEY] = epk;
-        std::vector<unsigned char> esk = list_of(0x04)(0x35)(0x75)(0xA4);
+        std::vector<unsigned char> esk = list_of(0x04)(0x88)(0xE1)(0xF4);
         base58Prefixes[EXT_SECRET_KEY] = esk;
     }
     virtual Network NetworkID() const { return CChainParams::TESTNET; }
