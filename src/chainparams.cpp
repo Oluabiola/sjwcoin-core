@@ -172,7 +172,7 @@ public:
         pchMessageStart[2] = 0xb5;
         pchMessageStart[3] = 0xda;
         nSubsidyHalvingInterval = 1;
-        bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20); //was1 now 20
+        bnProofOfWorkLimit = CBigNum(~uint256(0) >> 1); //was1 now 20
         genesis.nTime = 1434661056;
         genesis.nBits = 0x207fffff;
         genesis.nNonce = 1644661;
